@@ -1,5 +1,7 @@
+/* Font Family  */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
 
+/* MAIN HTML ELEMENTS */
 :root {
 	--primaryColor: #607d8b;
 	--secondayColor: #455a64;
@@ -25,15 +27,15 @@ button {
 	cursor: pointer;
 	border: none;
 	appearance: none;
-	transition: 0.4s;
+	transition: 0.2s ease-in-out;
 	font-family: 'JetBrains Mono', monospace;
 	color: var(--lightColor);
 }
 
 button:hover {
-	opacity: 0.9;
+	opacity: 0.8;
 }
-
+/* Calculator Container  */
 .mainCalc {
 	width: 100%;
 	max-width: 300px;
@@ -42,7 +44,9 @@ button:hover {
 	overflow: hidden;
 }
 
+/* Calculator Screen */
 .screen {
+	word-wrap: normal;
 	background-color: var(--lightColor);
 	color: var(--darkColor);
 	text-align: right;
@@ -52,17 +56,11 @@ button:hover {
 
 .screen span {
 	font-size: 12px;
-	margin-right: 2px;
 }
 
+/* Operator Buttons */
 .operators {
 	display: flex;
-	justify-content: center;
-}
-
-.digits {
-	display: flex;
-	flex-wrap: wrap;
 	justify-content: center;
 }
 
@@ -74,7 +72,14 @@ button:hover {
 	text-align: center;
 }
 
-.digits > button {
+/* Main Calculator Buttons */
+.main-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.main-buttons > button {
 	flex: 1 1 33%;
 	background-color: var(--secondayColor);
 	padding: 15px 25px 15px 25px;
