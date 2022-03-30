@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+export default function App() {
+
+ const digitsArr = [
+	 1, 2, 3, 4, 5, 6, 7, 8, 9
+ ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <div className='mainCalc'>
+    <div className='screen'>
+      <span>[0]</span>0
     </div>
+
+    <div className='operators'>
+				<button>+</button>
+				<button>-</button>
+				<button>/</button>
+				<button>*</button>
+				<button>DEL</button>
+    </div>
+
+		<div className='digits'>
+			{digitsArr.map((digit) => <button key={digit.id}>{digit}</button>)}
+			<button>.</button>
+			<button>0</button>
+			<button>=</button>
+		</div>
+  </div>
   );
 }
-
-export default App;

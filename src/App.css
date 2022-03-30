@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+
+:root {
+	--primaryColor: #607d8b;
+	--secondayColor: #455a64;
+	--lightColor: #e5e5e5;
+	--darkColor: #333333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	margin: 0px;
+	background-color: var(--darkColor);
+	color: #e5e5e5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: 'JetBrains Mono', monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+	text-align: center;
+	font-weight: 700;
+	cursor: pointer;
+	cursor: pointer;
+	border: none;
+	appearance: none;
+	transition: 0.4s;
+	font-family: 'JetBrains Mono', monospace;
+	color: var(--lightColor);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button:hover {
+	opacity: 0.9;
 }
 
-.App-link {
-  color: #61dafb;
+.mainCalc {
+	width: 100%;
+	max-width: 300px;
+	border-radius: 20px;
+	box-shadow: rgb(0, 0, 0) 0px 10px 13px -7px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+	overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.screen {
+	background-color: var(--lightColor);
+	color: var(--darkColor);
+	text-align: right;
+	padding: 15px 15px 15px;
+	font-size: 22px;
+}
+
+.screen span {
+	font-size: 12px;
+	margin-right: 2px;
+}
+
+.operators {
+	display: flex;
+	justify-content: center;
+}
+
+.digits {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.operators > button {
+	flex: 1 1 33%;
+	cursor: pointer;
+	background-color: var(--primaryColor);
+	padding: 15px 25px 15px 25px;
+	text-align: center;
+}
+
+.digits > button {
+	flex: 1 1 33%;
+	background-color: var(--secondayColor);
+	padding: 15px 25px 15px 25px;
 }
