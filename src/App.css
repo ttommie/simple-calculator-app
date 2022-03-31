@@ -46,7 +46,7 @@ button:hover {
 
 /* Calculator Screen */
 .screen {
-	word-wrap: normal;
+	word-wrap: break-word;
 	background-color: var(--lightColor);
 	color: var(--darkColor);
 	text-align: right;
