@@ -1,12 +1,12 @@
-# Hello-World-React
+# Simple Calculator App
 
-A simple calculator project created using react natives.
+A simple calculator project created using react.
 
 ## Features
 
--   Real-time Input & Calculation Updates.
--   Live Preview
--   Mobile Accessible
+- Real-time Input & Calculation Updates.
+- Live Preview
+- Mobile Accessible
 
 ## Deployment
 
